@@ -1,30 +1,39 @@
-# 🌊 Living Ocean — C++ Simulation
+# Ocean — C++ Simulation
 
-A simple simulation of an oceanic ecosystem written in C++. It models the behavior of algae, herbivorous and predatory fish in a 2D grid. The project uses key concepts of modern C++: OOP, templates, smart pointers, exceptions, RAII, Rule of Five, and Pimpl idiom.
+This project is a simple simulation of an oceanic ecosystem written in C++. It models the behavior of algae, herbivorous fish, and predatory fish within a 2D grid.
+
+The simulation emphasizes modern C++ principles, including Object-Oriented Programming (OOP), templates, smart pointers (RAII), exception handling, and common C++ idioms. The graphics are rendered using the SFML library.
 
 ![Gameplay Screenshot](screenshot.png)
 
-## 🧩 Description
+## ⚙️ How It Works
 
-The project simulates an ocean environment with the following entities:
+The ocean is represented as a grid where each cell can contain one of the following entities:
 
-- **Sand** — an empty cell  
-- **Algae** — algae that grow and reproduce  
-- **HerbivoreFish** — herbivorous fish that eat algae  
-- **PredatorFish** — predatory fish that hunt herbivorous fish  
+Sand: An empty, inert cell.
 
-On each time step (tick), all living organisms update their state:
-- Movement  
-- Searching for food  
-- Reproduction  
-- Death from hunger or old age  
+Algae: Grows and reproduces in adjacent empty cells.
 
-## 🔧 Requirements
+HerbivoreFish: Eats algae to survive and may die of hunger or old age.
 
-- C++17
-- CMake ≥ 3.14
-- make/g++
-- OS: Windows, Linux or macOS
+PredatorFish: Hunts HerbivoreFish and may also die of hunger or old age.
+
+The simulation progresses in time steps, or "ticks." During each tick, organisms perform actions such as moving, searching for food, reproducing, and potentially dying.
+
+## 🔧 Prerequisites
+
+
+To build and run this project, you will need:
+
+A C++17 compliant compiler (like g++)
+
+CMake (version 3.14 or higher)
+
+Make
+
+SFML 2.5+: The graphics library used for visualization. You can download it from the official SFML website.
+
+The project is compatible with Windows, Linux, and macOS.
 
 ## 🚀 How to Build and Run
 
