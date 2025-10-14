@@ -4,7 +4,7 @@ This project is a simple simulation of an oceanic ecosystem written in C++. It m
 
 The simulation emphasizes modern C++ principles, including Object-Oriented Programming (OOP), templates, smart pointers (RAII), exception handling, and common C++ idioms. The graphics are rendered using the SFML library.
 
-![Gameplay Screenshot](Безымянный.png)
+![Gameplay Screenshot](screen2.png)
 
 ## ⚙️ How It Works
 
