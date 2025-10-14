@@ -39,7 +39,7 @@ The project is compatible with Windows, Linux, and macOS.
 
 ### Clone the repository
 ```bash
-git clone https://github.com/andrew52522/ocean-simulation.git 
+git clone https://github.com/andrew52522/ocean_without_pain.git 
 cd ocean-simulation
 ```
 ### Create build directory and compile
