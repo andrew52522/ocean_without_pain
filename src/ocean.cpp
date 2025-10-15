@@ -1,5 +1,6 @@
 #include "ocean.hpp"
 #include <iostream>
+#include "algae.hpp"
 #include <random>
 
 Ocean::Ocean(size_t width, size_t height)
@@ -7,46 +8,69 @@ Ocean::Ocean(size_t width, size_t height)
 
 Ocean::~Ocean() = default;
 
-std::mt19937& Ocean::getRandomEngine() {
+std::mt19937 &Ocean::getRandomEngine()
+{
     return rng_;
 }
 
-void Ocean::tick() {
+void Ocean::tick()
+{
     std::vector<std::pair<size_t, size_t>> positions;
 
-    for (size_t y = 0; y < grid_.getHeight(); ++y) {
-        for (size_t x = 0; x < grid_.getWidth(); ++x) {
-            if (grid_.at(x, y)) {
+    for (size_t y = 0; y < grid_.getHeight(); ++y)
+    {
+        for (size_t x = 0; x < grid_.getWidth(); ++x)
+        {
+            if (grid_.at(x, y))
+            {
                 positions.emplace_back(x, y);
             }
         }
     }
 
-    for (auto [x, y] : positions) {
-        auto& cell = grid_.at(x, y);
-        if (cell && cell->isAlive()) {
+    for (auto [x, y] : positions)
+    {
+        auto &cell = grid_.at(x, y);
+        if (cell && cell->isAlive())
+        {
             cell->update(*this); // Обновляем только живых
         }
     }
 
+    std::uniform_int_distribution<> death_dist(1, 10);
+
     // После всех update(), можно явно очистить мертвых
-    for (size_t y = 0; y < grid_.getHeight(); ++y) {
-        for (size_t x = 0; x < grid_.getWidth(); ++x) {
-            auto& cell = grid_.at(x, y);
-            if (cell && !cell->isAlive()) {
-                cell.reset(); // Удаляем мертвую сущность
+    for (size_t y = 0; y < grid_.getHeight(); ++y)
+    {
+        for (size_t x = 0; x < grid_.getWidth(); ++x)
+        {
+            auto &cell = grid_.at(x, y);
+            if (cell)
+            {
+
+                // 40% шанс водоросли сдохнуть старой водоросли
+                if ((!cell->isAlive() && !dynamic_cast<Algae *>(cell.get())) || (!cell->isAlive() && dynamic_cast<Algae *>(cell.get()) && death_dist(getRandomEngine()) <= 4))
+                {
+                    cell.reset(); // Удаляем сущность
+                }
             }
         }
     }
 }
 
-void Ocean::display() const {
-    for (size_t y = 0; y < grid_.getHeight(); ++y) {
-        for (size_t x = 0; x < grid_.getWidth(); ++x) {
-            auto& cell = grid_.at(x, y);
-            if (cell && cell->isAlive()) {
+void Ocean::display() const
+{
+    for (size_t y = 0; y < grid_.getHeight(); ++y)
+    {
+        for (size_t x = 0; x < grid_.getWidth(); ++x)
+        {
+            auto &cell = grid_.at(x, y);
+            if (cell && cell->isAlive())
+            {
                 std::cout << cell->getSymbol() << ' ';
-            } else {
+            }
+            else
+            {
                 std::cout << "  "; // или ' ', чтобы не было символа
             }
         }
@@ -55,11 +79,15 @@ void Ocean::display() const {
     std::cout << "\n-------------------------\n\n";
 }
 
-std::optional<std::pair<int, int>> Ocean::findPosition(const Entity& entity) const {
-    for (size_t y = 0; y < grid_.getHeight(); ++y) {
-        for (size_t x = 0; x < grid_.getWidth(); ++x) {
-            auto& cell = grid_.at(x, y);
-            if (cell.get() == &entity) {
+std::optional<std::pair<int, int>> Ocean::findPosition(const Entity &entity) const
+{
+    for (size_t y = 0; y < grid_.getHeight(); ++y)
+    {
+        for (size_t x = 0; x < grid_.getWidth(); ++x)
+        {
+            auto &cell = grid_.at(x, y);
+            if (cell.get() == &entity)
+            {
                 return std::make_pair(static_cast<int>(x), static_cast<int>(y));
             }
         }
@@ -67,14 +95,17 @@ std::optional<std::pair<int, int>> Ocean::findPosition(const Entity& entity) con
     return std::nullopt;
 }
 
-
-int Ocean::countLivingEntities() const {
+int Ocean::countLivingEntities() const
+{
     int count = 0;
 
-    for (size_t y = 0; y < grid_.getHeight(); ++y) {
-        for (size_t x = 0; x < grid_.getWidth(); ++x) {
-            auto& cell = grid_.at(x, y);
-            if (cell && cell->isAlive()) {
+    for (size_t y = 0; y < grid_.getHeight(); ++y)
+    {
+        for (size_t x = 0; x < grid_.getWidth(); ++x)
+        {
+            auto &cell = grid_.at(x, y);
+            if (cell && cell->isAlive())
+            {
                 ++count;
             }
         }

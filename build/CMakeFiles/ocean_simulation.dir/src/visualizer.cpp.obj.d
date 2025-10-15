@@ -1,6 +1,6 @@
 CMakeFiles/ocean_simulation.dir/src/visualizer.cpp.obj: \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\visualizer.cpp \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\visualizer.hpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\visualizer.cpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\visualizer.hpp \
  C:/Users/User/Documents/SFML-2.6.1/include/SFML/Graphics.hpp \
  C:/Users/User/Documents/SFML-2.6.1/include/SFML/Window.hpp \
  C:/Users/User/Documents/SFML-2.6.1/include/SFML/System.hpp \
@@ -242,7 +242,7 @@ CMakeFiles/ocean_simulation.dir/src/visualizer.cpp.obj: \
  C:/Users/User/Documents/SFML-2.6.1/include/SFML/Graphics/Sprite.hpp \
  C:/Users/User/Documents/SFML-2.6.1/include/SFML/Graphics/Text.hpp \
  C:/Users/User/Documents/SFML-2.6.1/include/SFML/Graphics/VertexBuffer.hpp \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\ocean.hpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\ocean.hpp \
  C:/Users/User/gcc/include/c++/14.1.0/optional \
  C:/Users/User/gcc/include/c++/14.1.0/bits/enable_special_members.h \
  C:/Users/User/gcc/include/c++/14.1.0/memory \
@@ -282,8 +282,8 @@ CMakeFiles/ocean_simulation.dir/src/visualizer.cpp.obj: \
  C:/Users/User/gcc/include/c++/14.1.0/numeric \
  C:/Users/User/gcc/include/c++/14.1.0/bits/stl_numeric.h \
  C:/Users/User/gcc/include/c++/14.1.0/pstl/glue_numeric_defs.h \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\entity.hpp \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\utils/grid.hpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\entity.hpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\utils/grid.hpp \
  C:/Users/User/gcc/include/c++/14.1.0/iostream \
  C:/Users/User/gcc/include/c++/14.1.0/istream \
  C:/Users/User/gcc/include/c++/14.1.0/bits/istream.tcc

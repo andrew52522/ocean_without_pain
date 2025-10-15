@@ -1,7 +1,7 @@
 CMakeFiles/ocean_simulation.dir/src/sand.cpp.obj: \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\sand.cpp \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\sand.hpp \
- C:\Users\User\Documents\ocean\Ocean_simulation\src\entity.hpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\sand.cpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\sand.hpp \
+ C:\Users\User\Documents\ocean4\ocean_without_pain\src\entity.hpp \
  C:/Users/User/gcc/include/c++/14.1.0/memory \
  C:/Users/User/gcc/include/c++/14.1.0/bits/memoryfwd.h \
  C:/Users/User/gcc/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++config.h \
