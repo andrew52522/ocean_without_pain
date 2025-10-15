@@ -43,8 +43,20 @@ git clone https://github.com/andrew52522/ocean_without_pain.git
 cd ocean_without_pain
 ```
 ### Create build directory and compile
-```bash
+
+Bash
+```
 mkdir build && cd build
+```
+### Change on actual path in CmakeList.txt instead "*" for SFML library
+
+CmakeLists.txt
+```
+set(SFML_DIR "*/ocean_without_pain/src/bin")
+```
+
+Bash
+```
 cmake .
 make
 ```
