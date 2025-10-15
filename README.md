@@ -20,7 +20,7 @@ PredatorFish: Hunts HerbivoreFish and may also die of hunger or old age.
 
 The simulation progresses in time steps, or "ticks." During each tick, organisms perform actions such as moving, searching for food, reproducing, and potentially dying.
 
-## 🔧 Prerequisites
+##  Prerequisites
 
 
 To build and run this project, you will need:
@@ -35,7 +35,7 @@ SFML 2.5+: The graphics library used for visualization. You can download it from
 
 The project is compatible with Windows, Linux, and macOS.
 
-## 🚀 How to Build and Run
+##  How to Build and Run
 
 ### Note! 
 To build the project, you will need to call CMake with an additional flag that specifies the location of SFML.
