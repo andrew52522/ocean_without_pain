@@ -37,28 +37,29 @@ The project is compatible with Windows, Linux, and macOS.
 
 ## 🚀 How to Build and Run
 
-Download SFML LIB 
-link->
+### Note! 
+To build the project, you will need to call CMake with an additional flag that specifies the location of SFML.
 
-### Clone the repository
+## Build Instructions
+1. Clone the repository:
 ```bash
-git clone https://github.com/andrew52522/ocean_without_pain.git 
+git clone https://github.com/andrew52522/ocean_without_pain.git
 cd ocean_without_pain
 ```
-### Create build directory and compile
-
-Bash
+2. Create a build folder:
+```bash
+mkdir build
+cd build
 ```
-mkdir build && cd build
+3. Run CMake, specifying the path to your SFML folder. "MinGW Makefiles" for Windows:
+```bash
+cmake -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:/path/to/your/folder/SFML-2.6.1" ..
 ```
-
-
-Bash
-```
-cmake .
+4. Compile the project:
+```bash
 make
 ```
-### Run the simulation
+5. Run the executable:
 ```bash
-./ocean_simulation
+./ocean_simulation.exe
 ```
