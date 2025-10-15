@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ocean_simulation.dir/objects.a
-C:\Users\User\gcc\bin\ar.exe qc CMakeFiles\ocean_simulation.dir/objects.a @CMakeFiles\ocean_simulation.dir\objects1.rsp
-C:\Users\User\gcc\bin\c++.exe -Wl,--whole-archive CMakeFiles\ocean_simulation.dir/objects.a -Wl,--no-whole-archive -o ocean_simulation.exe -Wl,--out-implib,libocean_simulation.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ocean_simulation.dir\linkLibs.rsp
