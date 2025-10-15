@@ -51,12 +51,7 @@ Bash
 ```
 mkdir build && cd build
 ```
-### Change on actual path in CmakeList.txt instead "*" for SFML library
 
-CmakeLists.txt
-```
-set(SFML_DIR "*/ocean_without_pain/src/bin")
-```
 
 Bash
 ```
