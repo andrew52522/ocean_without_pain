@@ -37,6 +37,9 @@ The project is compatible with Windows, Linux, and macOS.
 
 ## 🚀 How to Build and Run
 
+Download SFML LIB 
+link->
+
 ### Clone the repository
 ```bash
 git clone https://github.com/andrew52522/ocean_without_pain.git 
