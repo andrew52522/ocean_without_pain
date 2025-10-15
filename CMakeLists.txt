@@ -5,8 +5,8 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-Developer! Change the path to the SFML library here in set() at the bottom.
-set(SFML_DIR "C:/Users/User/Documents/SFML-2.6.1/lib/cmake/SFML")
+# NOTE!! Developer! Change the path to the SFML library here in set() at the bottom or use in command terminal
+# set(SFML_DIR "C:/path/to/SFML-2.6.1/lib/cmake/SFML")
 
 # Find the SFML package
 find_package(SFML 2.6 COMPONENTS graphics window system REQUIRED)
